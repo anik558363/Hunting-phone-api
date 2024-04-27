@@ -19,8 +19,17 @@ const displayPhones = (phones) =>{
     cardContainer.textContent = '';
 
     if(phones.length === 0){
-        alert('i have not found')
+        alert('i have not found');
     }
+
+    // display show all button if there more than 12 phone
+    const btnHidden = document.getElementById('btn_hidden')
+    if(phones.length > 12){
+        btnHidden.classList.remove('hidden');
+    }else{
+        btnHidden.classList.add('hidden');
+    }
+
 
 
     // display only first 12 data
