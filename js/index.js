@@ -66,6 +66,8 @@ const displayPhones = (phones) =>{
         // 4. append chile elements
         cardContainer.appendChild(phoneCard)
     }); 
+    // hide loading spinner
+    toggleLoadingSpinner(false);
 }
 
 
@@ -75,6 +77,7 @@ const displayPhones = (phones) =>{
 // handle search button
 
 const handleSearch = () => {
+    toggleLoadingSpinner(true)
     const searchFiled = document.getElementById('search_filed');
     const searchText = searchFiled.value;
     if(searchText === ''){
@@ -84,6 +87,17 @@ const handleSearch = () => {
     }
 }
 
+
+// spinner_loader
+
+const toggleLoadingSpinner = (isLoading) => {
+    const spinnerLoader = document.getElementById('loading_spinner');
+    if(isLoading){
+        spinnerLoader.classList.remove('hidden');
+    }else{
+        spinnerLoader.classList.add('hidden');
+    }
+}
 
 
 // loadPhone();
