@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hunting Phone</title>
 
     <!-- google font link -->
 
@@ -23,6 +23,11 @@
 
 
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
         .font_poppins {
             font-family: "Poppins", sans-serif;
 
@@ -33,11 +38,42 @@
 
 </head>
 
-<body class="font_poppins">
+<body class="font_poppins container mx-auto px-3">
     <header>
-        <h1>anik</h1>
     </header>
-    <main></main>
+    <main>
+        
+        
+        <h2 class="text-2xl md:text-4xl text-center my-4">Search your phone</h2>
+        <section>
+            <div class="flex justify-center gap-1">
+                <input id="search_filed" type="text" placeholder="Search your phone..." class="input input-bordered w-full max-w-xs bg-slate-100" />
+                <button onclick="handleSearch()" class="btn btn-info text-white">Search</button>
+            </div>
+        </section>
+
+        <!-- search result -->
+        <section class="my-10">
+            <div id="card_container" class="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+
+                <!-- <div class="card bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="https://daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title">Shoes!</h2>
+                      <p>If a dog chews shoes whose shoes does he choose?</p>
+                      <div class="card-actions">
+                        <button class="btn btn-primary">Buy Now</button>
+                      </div>
+                    </div>
+                </div> -->
+
+            </div>
+            
+        </section>
+
+    </main>
     <footer></footer>
     <script src="js/index.js"></script>
 </body>
